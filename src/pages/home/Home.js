@@ -17,7 +17,7 @@ const Home = () => {
     <div>
 
       <div className={style.header_background} >
-        <div><img className={style.img2} src={img2} alt="shahporan hall" srcset="" /></div>
+        <div><img className={style.img2} src={img2} alt="shahporan hall" srcSet="" /></div>
         <div className={style.hall_name}>
           <div className={style.hall}>Shahparan Hall</div>
           <a className={style.uni} href="https://www.sust.edu/">Shahjalal University of Science and Technology
@@ -103,9 +103,9 @@ const Home = () => {
       </div>
       <div className={`${style.gallery_title} center`} id="gallery">Gallery</div>
       <div className={style.gallery}>
-        <img src={img1} alt="shahporan hall" srcset="" />
-        <img src={img2} alt="shahporan hall" srcset="" />
-        <img src={img1} alt="shahporan hall" srcset="" />
+        <img src={img1} alt="shahporan hall" srcSet="" />
+        <img src={img2} alt="shahporan hall" srcSet="" />
+        <img src={img1} alt="shahporan hall" srcSet="" />
       </div>
       <div className="department-overview department-faculty">
         <h2 id="mobile-dept-title" className={`${style.gallery_title} center`}>Offices</h2>
