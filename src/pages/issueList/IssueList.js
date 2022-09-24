@@ -71,6 +71,8 @@ export default function IssueList() {
     return (
         <div className={styles.flex_container}>
             <h1>Issue List</h1>
+            <h5>Problems faced by the students.</h5>
+            <h4>Sort by: Id/room/</h4>
             <table>
                 <thead>
                     <tr>

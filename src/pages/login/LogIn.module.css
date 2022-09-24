@@ -1,0 +1,47 @@
+.container {
+    background-color: #f4f7f8;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+    border-radius: 15px;
+    box-shadow: 5px 10px #88888859;
+}
+
+form {
+    padding: 50px;
+}
+
+.submit {
+
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    padding: 15px 35px;
+    cursor: pointer;
+    background-color: #DE840A;
+    color: white;
+    margin: 30px;
+}
+
+.submit:hover {
+    background-color: rgb(57, 141, 57);
+    transition: ease-in 0.3s;
+}
+
+.cancel {
+    background-color: rgb(206, 100, 81);
+}
+
+.cancel:hover {
+    background-color: rgb(238, 69, 39);
+}
+
+.h1 {
+    margin: 0 0 30px 0;
+    text-align: center;
+    padding: 15px;
+    color: #DE840A;
+}

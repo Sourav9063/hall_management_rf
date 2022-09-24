@@ -2,6 +2,7 @@
 
     --header-top-color: #01103360;
     --header-bottom-color: #011033;
+    --accent-color: #DE840A;
 }
 
 * {
@@ -32,7 +33,6 @@ button:hover {
     justify-content: flex-end;
     margin-right: 50px;
 }
-
 nav a {
     position: relative;
     text-decoration: none;
