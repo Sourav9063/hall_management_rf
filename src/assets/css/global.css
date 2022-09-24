@@ -1,0 +1,152 @@
+/* global color variable */
+:root {
+    --text-color: #282c35;
+    --background-color: #282c35;
+    --primary-color: #61dafb;
+    --secondary-color: #ffcf2b;
+    --tertiary-color: #ff2b2b;
+    --header-top-color: #01103360;
+    --header-bottom-color: #011033;
+}
+
+/* global font family */
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+/* global font size */
+body {
+    font-size: 1.5rem;
+}
+
+/* global font color */
+body {
+    color: var(--text-color);
+}
+
+/* global background color */
+body {
+    background-color: var(--background-color);
+}
+
+/* global link color */
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+/* global link hover color */
+a:hover {
+    color: var(--secondary-color);
+}
+
+/* global link visited color */
+a:visited {
+    color: var(--tertiary-color);
+}
+
+/* global link active color */
+a:active {
+    color: var(--primary-color);
+}
+
+/* global link focus color */
+a:focus {
+    color: var(--secondary-color);
+}
+
+/* global list style */
+ul {
+    list-style-type: none;
+}
+
+/* global header */
+h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h2 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h3 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h4 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h5 {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h6 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+/* global paragraph */
+p {
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* global button */
+button {
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem 1rem
+}
+
+
+
+body {
+    background-color: #f5f5f5;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    padding: 0;
+}
+
+.center {
+    display: grid;
+    place-items: center;
+}
+
+
+.link {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0 2px;
+    transition: background-size .3s;
+    position: relative;
+}
+
+.link:hover {
+    background-size: 100% 2px;
+}

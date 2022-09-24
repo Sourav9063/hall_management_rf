@@ -1,0 +1,11 @@
+.header_img {
+    background-image: linear-gradient(to bottom, var(--header-top-color), var(--header-bottom-color)), url(https://upload.wikimedia.org/wikipedia/commons/6/69/Sust_shahporanhall.jpg);
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.header {
+    width: 100%;
+    height: 45vh;
+}
