@@ -1,0 +1,48 @@
+table {
+    border-collapse: collapse;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+th,
+td {
+    padding: 8px;
+}
+
+thead {
+    background-color: #333;
+    color: white;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    letter-spacing: 2%;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #eee;
+}
+
+.working {
+    background-color: #fffb00;
+}
+
+.pending {
+    background-color: #ff0000;
+}
+
+.completed {
+    background-color: #00ff00;
+}
+
+.flex_container {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    min-height: 80vh;
+}
