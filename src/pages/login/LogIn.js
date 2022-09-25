@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useContext, useState } from "react";
 import style from "./LogIn.module.css";
 import { Link, useNavigate } from "react-router-dom";
+import { UserContext } from "../../utils/userContext";
 
 const LogIn = () => {
   const navigate = useNavigate();
@@ -8,13 +9,17 @@ const LogIn = () => {
     navigate("/");
   };
 
+  const [platformValue, plaftormInputProps] = useState("Student");
+
+  const [user, setUser] = useContext(UserContext);
+
   return (
     <div>
       <form className={style.container}>
         <h1 className={style.h1}>Log In</h1>
         <div>
           <div>
-            <label for="email">Email</label>
+            <label htmlFor="email">Email</label>
             <input
               type="text"
               id="email"
@@ -24,32 +29,55 @@ const LogIn = () => {
           </div>
         </div>
         <div>
-          <label for="psw">Password</label>
+          <label htmlFor="psw">Password</label>
           <input
             type="password"
             placeholder="Enter Password"
             name="psw"
             required
           />
-        </div>
+        </div >
         <div>
-          <input type="radio" id="age1" name="age" value="30" />
-          <label for="age1">Student</label>
-          <input type="radio" id="age1" name="age" value="30" />
-          <label for="age1">Provost</label>
-          <input type="radio" id="age2" name="age" value="60" />
-          <label for="age2">Administration</label>
-          <input type="radio" id="age3" name="age" value="100" />
-          <label for="age3">Department Head</label>
-        </div>
+          <input type="radio" id="age1" name="age" value="Student" defaultChecked onChange={(e) => {
+            plaftormInputProps(e.target.value);
+            console.log(platformValue);
+          }} />
+          <label htmlFor="age1">Student</label>
+          <input type="radio" id="age1" name="age" value="Provost" onChange={(e) => {
+            plaftormInputProps(e.target.value);
+            console.log(platformValue);
+          }} />
+          <label htmlFor="age1" > Provost</label >
+          <input type="radio" id="age2" name="age" value="Administration" onChange={(e) => {
+            plaftormInputProps(e.target.value);
+            console.log(platformValue);
+          }} />
+          <label htmlFor="age2" > Administration</label >
+          <input type="radio" id="age3" name="age" value="Department" onChange={(e) => {
+            plaftormInputProps(e.target.value);
+            console.log(platformValue);
+          }} />
+          <label htmlFor="age3" > Department Head</label >
+        </div >
         <div className={style.btns}>
           <button onClick={toHome} className={`${style.submit} ${style.cancel} `}>Cancel</button>
-          <button className={style.submit}>Log In</button>
+          <input type="submit" className={style.submit} onClick={(e) => {
+            e.preventDefault();
+
+            console.dir(e.target);
+            console.log(platformValue);
+            localStorage.setItem("user", platformValue);
+
+            setUser(platformValue);
+
+            toHome();
+
+          }} />
         </div>
         <p style={{ fontSize: "20px" }}>Don't have an account?<Link to="/application">Register</Link></p>
-      </form>
+      </form >
 
-    </div>
+    </div >
   );
 };
 

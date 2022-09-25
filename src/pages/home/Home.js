@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import style from "./Home.module.css";
 import img1 from "../../assets/images/img1.jpg";
@@ -6,6 +6,9 @@ import img2 from "../../assets/images/img2.jpg";
 import { useNavigate } from "react-router-dom";
 
 const Home = () => {
+
+  const [user, setUser] = useState(localStorage.getItem("user"));
+
   const navigate = useNavigate();
   const toApplication = () => {
     navigate("/application");
