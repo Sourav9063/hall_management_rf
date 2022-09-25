@@ -25,6 +25,7 @@ const Home = () => {
           <div className={style.hall}>Shahparan Hall</div>
           <a className={style.uni} href="https://www.sust.edu/">Shahjalal University of Science and Technology
           </a>
+          <h4 className={style.log}>Logged In As {user}</h4>
         </div>
         <div className={style.btn}>
           <button onClick={toApplication} >Apply now</button>

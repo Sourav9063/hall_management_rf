@@ -212,3 +212,7 @@ a div img:hover {
         transform: translate(-100%, 0);
     }
 }
+
+.log {
+    color: aliceblue;
+}
