@@ -21,6 +21,8 @@ const Navbar = () => {
           <Link to="/issue" state={{ forWhat: "Issue" }}>Issue</Link>
           <Link to="/issue" state={{ forWhat: "Payment" }}>Payment</Link>
         </div>}
+        {user !== 'Student' && <Link to="/issue_list">Current Issues</Link>
+        }
       </nav>
     </div>
 
