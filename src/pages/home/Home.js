@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import style from "./Home.module.css";
 import img1 from "../../assets/images/img1.jpg";
@@ -16,11 +16,25 @@ const Home = () => {
   const toLogIn = () => {
     navigate("/login");
   };
+
+  const [anime, setAnime] = useState(style.img2);
+
+
+  useEffect(() => {
+
+    setAnime(`${style.img2} ${style.img2_2}`);
+
+
+
+  }, [])
+
+
+
   return (
     <div>
 
       <div className={style.header_background} >
-        <div><img className={style.img2} src={img2} alt="shahporan hall" srcSet="" /></div>
+        <div><img className={anime} src={img2} alt="shahporan hall" srcSet="" /></div>
         <div className={style.hall_name}>
           <div className={style.hall}>Shahparan Hall</div>
           <a className={style.uni} href="https://www.sust.edu/">Shahjalal University of Science and Technology
