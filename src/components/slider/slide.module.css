@@ -16,24 +16,27 @@
   border-radius: 10px;
 }
 
-.right_arrow {
-
-  padding: 10px;
-  font-size: 3.5rem;
-  color: #DE840A;
-
-  cursor: pointer;
-  user-select: none;
-}
-
+.right_arrow,
 .left_arrow {
 
   padding: 10px;
   font-size: 3.5rem;
   color: #DE840A;
-  z-index: 10;
+
   cursor: pointer;
   user-select: none;
+  transition: transform 0.3s ease-out;
+}
+
+.right_arrow:hover,
+.left_arrow:hover {
+  transform: scale(1.1);
+}
+
+.right_arrow:active,
+.left_arrow:active {
+  transition: transform .1s;
+  transform: scale(0.9);
 }
 
 .slide {
