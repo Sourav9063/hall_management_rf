@@ -24,12 +24,14 @@
     top: 10vh;
     left: 10%;
     z-index: 1;
-    transition: top .7s cubic-bezier(0, 0, 0.6, 1.41);
+    transition: top .7s cubic-bezier(0, 0, 0.6, 1.41), opacity .7s cubic-bezier(0, 0, 0.6, 1.41);
+    opacity: .1;
     /* overflow: hidden; */
 }
 
 .img2_2 {
     top: 35vh;
+    opacity: 1;
 }
 
 .hall_name {
@@ -221,3 +223,12 @@ a div img:hover {
 .log {
     color: aliceblue;
 }
+
+/* .slider{
+    height: 350px;
+    width: 300px;
+    border-radius: 15px;
+    align-items: center;
+    align-content: center;
+    margin: auto;
+} */

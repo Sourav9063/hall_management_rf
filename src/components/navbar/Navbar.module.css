@@ -2,10 +2,10 @@ nav {
   position: fixed;
   right: 0;
   top: 0;
-  border-radius: 10px;
+  border-radius: 5px;
 
   backdrop-filter: blur(10px);
-  background-color: rgba(41, 41, 41, 0.44);
+  background-color: var(--navbar-background-color);
 
   display: flex;
   margin-top: 30px;
@@ -17,7 +17,24 @@ nav {
   height: 40px;
   transition: transform 0.3s;
   z-index: 100;
+  padding: 5px 10px;
 }
+
+@media screen and (max-width: 750px) {
+  nav {
+    flex-direction: column;
+    height: auto;
+    margin-right: 5px;
+
+  }
+
+  nav a {
+    padding: 10px 0px;
+
+  }
+
+}
+
 
 nav:hover {
   transform: scaleX(1.1) scaleY(1.2);

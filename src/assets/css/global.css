@@ -3,6 +3,7 @@
     --header-top-color: #01103360;
     --header-bottom-color: #011033;
     --accent-color: #DE840A;
+    --navbar-background-color: rgba(0, 0, 0, 0.5);
 }
 
 html {
