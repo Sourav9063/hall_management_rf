@@ -268,13 +268,7 @@ const Home = () => {
             </a>
           </li>
         </ul>
-        <div className={style.footer}>
-          <h2>Contact</h2>
-          <div className="contact_address_container">
-            <ul>
-              <li className="odd first-child"><strong>Shahjalal University of Science and Technology</strong></li><li className="even last-child">Shahjalal University of Science and Technology, Sylhet-3114, Bangladesh.</li>								</ul>
-          </div>
-        </div>
+
       </div>
 
     </div>
@@ -282,3 +276,5 @@ const Home = () => {
 };
 
 export default Home;
+
+

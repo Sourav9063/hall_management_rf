@@ -8,6 +8,7 @@ import LogIn from "./pages/login/LogIn"
 import IssueList from "./pages/issueList/IssueList";
 import { useState } from "react";
 import { UserContext } from "./utils/userContext";
+import Footer from "./components/footer/Footer";
 
 
 
@@ -30,6 +31,7 @@ function App() {
             <Route path="login" element={<LogIn />} />
             <Route path="/issue_list" element={<IssueList />} />
           </Routes>
+          <Footer />
         </HashRouter>
       </UserContext.Provider>
     </>
