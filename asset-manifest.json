@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/hall_management_rf/static/css/main.691c28ad.css",
-    "main.js": "/hall_management_rf/static/js/main.d788f2c7.js",
+    "main.css": "/hall_management_rf/static/css/main.1b6d800c.css",
+    "main.js": "/hall_management_rf/static/js/main.3c2ab4b3.js",
     "static/media/img2.jpg": "/hall_management_rf/static/media/img2.7d26c7cdfeaea4547799.jpg",
     "index.html": "/hall_management_rf/index.html",
-    "main.691c28ad.css.map": "/hall_management_rf/static/css/main.691c28ad.css.map",
-    "main.d788f2c7.js.map": "/hall_management_rf/static/js/main.d788f2c7.js.map"
+    "main.1b6d800c.css.map": "/hall_management_rf/static/css/main.1b6d800c.css.map",
+    "main.3c2ab4b3.js.map": "/hall_management_rf/static/js/main.3c2ab4b3.js.map"
   },
   "entrypoints": [
-    "static/css/main.691c28ad.css",
-    "static/js/main.d788f2c7.js"
+    "static/css/main.1b6d800c.css",
+    "static/js/main.3c2ab4b3.js"
   ]
 }
