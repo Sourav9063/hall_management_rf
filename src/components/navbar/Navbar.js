@@ -3,11 +3,12 @@ import styles from "./Navbar.module.css"
 import { Link } from "react-router-dom";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { UserContext } from "../../utils/userContext";
+import useUser from "../../utils/hooks/useUser";
 
 
 const Navbar = () => {
 
-  const [user, setUser] = useContext(UserContext)
+  const [user, setUser] = useUser();
 
   return (
 
@@ -17,10 +18,10 @@ const Navbar = () => {
         <AnchorLink href="#about">About</AnchorLink>
         <AnchorLink href="#facilities">Facilities</AnchorLink>
         <AnchorLink href="#gallery">Gallery</AnchorLink>
-        {user === "Student" && <div>
+        {user === "Student" && < >
           <Link to="/issue" state={{ forWhat: "Issue" }}>Issue</Link>
           <Link to="/issue" state={{ forWhat: "Payment" }}>Payment</Link>
-        </div>}
+        </>}
         {user !== 'Student' && user !== "" && user != null && <Link to="/issue_list">Current Issues</Link>
         }
       </nav>

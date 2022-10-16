@@ -2,6 +2,7 @@ import React, { useContext, useState } from "react";
 import style from "./LogIn.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { UserContext } from "../../utils/userContext";
+import useUser from "../../utils/hooks/useUser";
 
 const LogIn = () => {
   const navigate = useNavigate();
@@ -9,10 +10,9 @@ const LogIn = () => {
     navigate("/");
   };
 
-  const [platformValue, plaftormInputProps] = useState("Student");
+  const [platformValue, platformInputProps] = useState("Student");
 
-  const [user, setUser] = useContext(UserContext);
-
+  const [user, setUser] = useUser();
   return (
     <div>
       <form className={style.container}>
@@ -39,22 +39,22 @@ const LogIn = () => {
         </div >
         <div>
           <input type="radio" id="age1" name="age" value="Student" defaultChecked onChange={(e) => {
-            plaftormInputProps(e.target.value);
+            platformInputProps(e.target.value);
             console.log(platformValue);
           }} />
           <label htmlFor="age1">Student</label>
           <input type="radio" id="age1" name="age" value="Provost" onChange={(e) => {
-            plaftormInputProps(e.target.value);
+            platformInputProps(e.target.value);
             console.log(platformValue);
           }} />
           <label htmlFor="age1" > Provost</label >
           <input type="radio" id="age2" name="age" value="Administration" onChange={(e) => {
-            plaftormInputProps(e.target.value);
+            platformInputProps(e.target.value);
             console.log(platformValue);
           }} />
           <label htmlFor="age2" > Administration</label >
           <input type="radio" id="age3" name="age" value="Department" onChange={(e) => {
-            plaftormInputProps(e.target.value);
+            platformInputProps(e.target.value);
             console.log(platformValue);
           }} />
           <label htmlFor="age3" > Department Head</label >
