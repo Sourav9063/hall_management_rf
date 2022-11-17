@@ -1,14 +1,20 @@
 {
   "files": {
-    "main.css": "/hall_management_rf/static/css/main.1b6d800c.css",
-    "main.js": "/hall_management_rf/static/js/main.3c2ab4b3.js",
+    "main.css": "/hall_management_rf/static/css/main.13589970.css",
+    "main.js": "/hall_management_rf/static/js/main.ab1d6ec7.js",
+    "static/media/s2.jpg": "/hall_management_rf/static/media/s2.9da77842bde47192cee6.jpg",
+    "static/media/s1.jpg": "/hall_management_rf/static/media/s1.98ee016598a778228a45.jpg",
+    "static/media/s4.jpg": "/hall_management_rf/static/media/s4.47226c3f398292cffea4.jpg",
+    "static/media/s5.jpg": "/hall_management_rf/static/media/s5.317e39d4829849594fac.jpg",
+    "static/media/map.png": "/hall_management_rf/static/media/map.5b8a0234266292f1ddfa.png",
+    "static/media/s3.jpg": "/hall_management_rf/static/media/s3.6b8e8b714129d6ed2993.jpg",
     "static/media/img2.jpg": "/hall_management_rf/static/media/img2.7d26c7cdfeaea4547799.jpg",
     "index.html": "/hall_management_rf/index.html",
-    "main.1b6d800c.css.map": "/hall_management_rf/static/css/main.1b6d800c.css.map",
-    "main.3c2ab4b3.js.map": "/hall_management_rf/static/js/main.3c2ab4b3.js.map"
+    "main.13589970.css.map": "/hall_management_rf/static/css/main.13589970.css.map",
+    "main.ab1d6ec7.js.map": "/hall_management_rf/static/js/main.ab1d6ec7.js.map"
   },
   "entrypoints": [
-    "static/css/main.1b6d800c.css",
-    "static/js/main.3c2ab4b3.js"
+    "static/css/main.13589970.css",
+    "static/js/main.ab1d6ec7.js"
   ]
 }
