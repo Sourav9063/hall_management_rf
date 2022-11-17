@@ -1,7 +1,52 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "./Application.module.css";
 
+import Division from "../../components/json/divisions.json";
+import District from "../../components/json/district.json"
+import Upazilla from "../../components/json/upazilla.json"
+import Union from "../../components/json/union.json"
 const Application = () => {
+  const div = Division;
+  const dis = District;
+  const up = Upazilla;
+  const uni= Union;
+  let id = null;
+  let disId = null;
+  const [division, setDivision] = useState("");
+  const [district, setDistrict] = useState("");
+  const [upazilla, setUpazilla] = useState("");
+  const [union, setUnion] = useState("");
+  const [division1, setDivision1] = useState("");
+  const [district1, setDistrict1] = useState("");
+  const [upazilla1, setUpazilla1] = useState("");
+  const [union1, setUnion1] = useState("");
+  const handleDivision = (e) => {
+    setDivision( e.target.value)
+  };
+  const handleDistrict = (e) => {
+    setDistrict(e.target.value);
+  };
+  const handleUpazilla = (e) => {
+    setUpazilla(e.target.value);
+  };
+  const handleUnion= (e) => {
+    setUnion(e.target.value);
+  };
+
+  const handleDivision1 = (e) => {
+    setDivision1( e.target.value)
+  };
+  const handleDistrict1 = (e) => {
+    setDistrict1(e.target.value);
+  };
+  const handleUpazilla1 = (e) => {
+    setUpazilla1(e.target.value);
+  };
+  const handleUnion1= (e) => {
+    setUnion1(e.target.value);
+  };
+  
+
   return (
     <div>
       <form className={style.container}>
@@ -26,7 +71,7 @@ const Application = () => {
               placeholder="Last name"
             />
           </div>
-        </div >
+        </div>
         <div className={style.perm_add}>
           <div>
             <label htmlFor="fathers_name">Father's Name</label>
@@ -45,8 +90,8 @@ const Application = () => {
               name="mothersname"
               placeholder="Mother's Name"
             />
-          </div >
-        </div >
+          </div>
+        </div>
         <div className={style.perm_add}>
           {" "}
           <div>
@@ -66,85 +111,117 @@ const Application = () => {
               name="email"
               placeholder="@studet.sust.edu"
             />
-          </div >
-        </div >
+          </div>
+        </div>
         <h3>Permanent Address</h3>
         <div className={style.perm_add}>
           <div>
-            <label htmlFor="district">District</label>
-            <select id="district" name="district">
-              <option value="district1">district1</option>
-              <option value="district2">district2</option>
-              <option value="district3">district3</option>
+          <label htmlFor="division">Division</label>
+            <select value={division} onChange={handleDivision}>
+              <option selected disabled="true">
+                ----Division----
+              </option>
+              {div.map((res) => (
+                <option value={res.id}>{res.name}</option>
+              ))}
+            </select>
+          </div>
+
+          <div>
+          <label htmlFor="district">District</label>
+            <select value={district} onChange={handleDistrict}>
+              <option selected disabled="true">
+                ----District----
+              </option>
+              {dis.map((res) => {
+                if (division === res.division_id) {
+                  return <option value={res.id}>{res.name}</option>;
+                }
+              })}
             </select>
           </div>
           <div>
-            {" "}
-            <label htmlFor="thana">Thana</label>
-            <select id="thana" name="thana">
-              <option value="thana1">thana1</option>
-              <option value="thana2">thana2</option>
-              <option value="thana3">thana3</option>
+          <label htmlFor="upazilla">Upazilla</label>
+          <select value={upazilla} onChange={handleUpazilla}>
+              <option selected disabled="true">
+                ----Upazilla----
+              </option>
+              {up.map((res) => {
+                if (district === res.district_id) {
+                  return <option value={res.id}>{res.name}</option>;
+                }
+              })}
             </select>
-          </div >
+          </div>
           <div>
-            {" "}
-            <label htmlFor="post_office">P.O</label>
-            <select id="post_office" name="post_office">
-              <option value="post_office1">P.0.1</option>
-              <option value="post_office2">P.0.2</option>
-              <option value="post_office3">P.0.3</option>
+          <label htmlFor="union">Union</label>
+          <select value={union} onChange={handleUnion}>
+              <option selected disabled="true">
+                ----Union----
+              </option>
+              {uni.map((res) => {
+                if (upazilla === res.upazilla_id) {
+                  return <option value={res.id}>{res.name}</option>;
+                }
+              })}
             </select>
-          </div >
-          <div>
-            {" "}
-            <label htmlFor="vlg">Country</label>
-            <select id="vlg" name="vlg">
-              <option value="vlg1">Village1</option>
-              <option value="vlg2">Village2</option>
-              <option value="vlg3">Village3</option>
-            </select>
-          </div >
-        </div >
+          </div>
+        </div>
 
         <h3>Present Address</h3>
         <div className={style.perm_add}>
           <div>
-            <label htmlFor="district">District</label>
-            <select id="district" name="district">
-              <option value="district1">district1</option>
-              <option value="district2">district2</option>
-              <option value="district3">district3</option>
+          <label htmlFor="division">Division</label>
+            <select value={division1} onChange={handleDivision1}>
+              <option selected disabled="true">
+                ----Division----
+              </option>
+              {div.map((res) => (
+                <option value={res.id}>{res.name}</option>
+              ))}
+            </select>
+          </div>
+
+          <div>
+          <label htmlFor="district">District</label>
+            <select value={district1} onChange={handleDistrict1}>
+              <option selected disabled="true">
+                ----District----
+              </option>
+              {dis.map((res) => {
+                if (division1 === res.division_id) {
+                  return <option value={res.id}>{res.name}</option>;
+                }
+              })}
             </select>
           </div>
           <div>
-            {" "}
-            <label htmlFor="thana">Thana</label>
-            <select id="thana" name="thana">
-              <option value="thana1">thana1</option>
-              <option value="thana2">thana2</option>
-              <option value="thana3">thana3</option>
+          <label htmlFor="upazilla">Upazilla</label>
+          <select value={upazilla1} onChange={handleUpazilla1}>
+              <option selected disabled="true">
+                ----Upazilla----
+              </option>
+              {up.map((res) => {
+                if (district1 === res.district_id) {
+                  return <option value={res.id}>{res.name}</option>;
+                }
+              })}
             </select>
-          </div >
+          </div>
           <div>
-            {" "}
-            <label htmlFor="post_office">P.O</label>
-            <select id="post_office" name="post_office">
-              <option value="post_office1">P.0.1</option>
-              <option value="post_office2">P.0.2</option>
-              <option value="post_office3">P.0.3</option>
+          <label htmlFor="union">Union</label>
+          <select value={union1} onChange={handleUnion1}>
+              <option selected disabled="true">
+                ----Union----
+              </option>
+              {uni.map((res) => {
+                if (upazilla1 === res.upazilla_id) {
+                  return <option value={res.id}>{res.name}</option>;
+                }
+              })}
             </select>
-          </div >
-          <div>
-            {" "}
-            <label htmlFor="vlg">Village</label>
-            <select id="vlg" name="vlg">
-              <option value="vlg1">Village1</option>
-              <option value="vlg2">Village2</option>
-              <option value="vlg3">Village3</option>
-            </select>
-          </div >
-        </div >
+          </div>
+        </div>
 
         <div>
           <label htmlFor="department">Department</label>
@@ -153,7 +230,7 @@ const Application = () => {
             <option value="department2">PME</option>
             <option value="department3">GEB</option>
           </select>
-        </div >
+        </div>
         <div>
           <label htmlFor="year">Year</label>
           <select id="year" name="year">
@@ -161,11 +238,11 @@ const Application = () => {
             <option value="year2">2019-20</option>
             <option value="year3">2020-2021</option>
           </select>
-        </div >
+        </div>
         <div>
           <label htmlFor="reg">Registration No</label>
           <input type="text" id="reg" name="reg" placeholder="Reg.No" />
-        </div >
+        </div>
         <h3>Last Result</h3>
         <div className={style.perm_add}>
           <div>
@@ -183,7 +260,7 @@ const Application = () => {
               <option value="year2">2019-20</option>
               <option value="year3">2020-2021</option>
             </select>
-          </div >
+          </div>
           <div>
             <label htmlFor="semester">Semester</label>
             <select id="semester" name="semester">
@@ -191,20 +268,25 @@ const Application = () => {
               <option value="semester">2nd</option>
               <option value="semester">3rd</option>
             </select>
-          </div >
+          </div>
           <div>
             <label htmlFor="cgpa">CGPA</label>
             <input type="text" id="cgpa" name="cgpa" placeholder="CGPA" />
-          </div >
-        </div >
+          </div>
+        </div>
         <div>
           <label htmlFor="merit">Merit Position (Admission Test)</label>
-          <input type="text" id="merit" name="merit" placeholder="Merit Position" />
-        </div >
+          <input
+            type="text"
+            id="merit"
+            name="merit"
+            placeholder="Merit Position"
+          />
+        </div>
 
         <input className={style.submit} type="submit" value="Submit" />
-      </form >
-    </div >
+      </form>
+    </div>
   );
 };
 

@@ -1,0 +1,72 @@
+[
+	{
+		"name": "Kevin Hyde",
+		"regNo": 2019313353,
+		"dept": "SWE",
+		"semester": 5,
+		"merit": 888
+	},
+	{
+		"name": "Paloma Bright",
+		"regNo": 2016330418,
+		"dept": "FET",
+		"semester": 6,
+		"merit": 1356
+	},
+	{
+		"name": "Robin Valencia",
+		"regNo": 2016157254,
+		"dept": "FET",
+		"semester": 7,
+		"merit": 3457
+	},
+	{
+		"name": "Jena Trevino",
+		"regNo": 2018468822,
+		"dept": "FET",
+		"semester": 5,
+		"merit": 432
+	},
+	{
+		"name": "Igor Peterson",
+		"regNo": 2017971037,
+		"dept": "CSE",
+		"semester": 5,
+		"merit": 1884
+	},
+	{
+		"name": "Ayanna Watts",
+		"regNo": 2018185431,
+		"dept": "EEE",
+		"semester": 2,
+		"merit": 2002
+	},
+	{
+		"name": "Edward Mejia",
+		"regNo": 2019599608,
+		"dept": "CSE",
+		"semester": 4,
+		"merit": 3224
+	},
+	{
+		"name": "Daquan Cooley",
+		"regNo": 2018225548,
+		"dept": "SWE",
+		"semester": 9,
+		"merit": 1545
+	},
+	{
+		"name": "Benjamin Wilson",
+		"regNo": 2017607120,
+		"dept": "CSE",
+		"semester": 5,
+		"merit": 2007
+	},
+	{
+		"name": "Michael Winters",
+		"regNo": 2017143013,
+		"dept": "CSE",
+		"semester": 3,
+		"merit": 2797
+	}
+]

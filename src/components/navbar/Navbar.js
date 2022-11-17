@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import styles from "./Navbar.module.css"
-import { Link } from "react-router-dom";
+import { Link,useLocation } from "react-router-dom";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import { UserContext } from "../../utils/userContext";
 import useUser from "../../utils/hooks/useUser";
@@ -8,7 +8,15 @@ import useUser from "../../utils/hooks/useUser";
 
 const Navbar = () => {
 
+  const withouSidebarRoutes = ["/registration","/administrationReg","/provostReg","/dept_headReg"];
+
   const [user, setUser] = useUser();
+
+  const {pathname} = useLocation();
+
+
+  if (withouSidebarRoutes.some((item) => pathname.includes(item))) return null;
+
 
   return (
 

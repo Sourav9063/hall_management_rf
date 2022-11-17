@@ -1,0 +1,50 @@
+[
+    {
+      "id": 1,
+      "roomNo": 101,
+      "block": "A",
+      "floor": 1,
+      "capacity": 4,
+      "residintNo": 0
+    },
+    {
+      "id": 2,
+      "roomNo": 201,
+      "block": "B",
+      "floor": 2,
+      "capacity": 4,
+      "residintNo": 3
+    },
+    {
+      "id": 2,
+      "roomNo": 301,
+      "block": "A",
+      "floor": 3,
+      "capacity": 4,
+      "residintNo": 2
+    },
+    {
+      "id": 3,
+      "roomNo": 401,
+      "block": "C",
+      "floor": 4,
+      "capacity": 4,
+      "residintNo": 1
+    },
+    {
+      "id": 4,
+      "roomNo": 202,
+      "block": "D",
+      "floor": 2,
+      "capacity": 4,
+      "residintNo": 4
+    },
+    {
+      "id": 5,
+      "roomNo": 102,
+      "block": "A",
+      "floor": 1,
+      "capacity": 4,
+      "residintNo": 1
+    }
+  ]

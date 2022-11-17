@@ -9,7 +9,7 @@ const LogIn = () => {
   const toHome = () => {
     navigate("/");
   };
-
+ 
   const [platformValue, platformInputProps] = useState("Student");
 
   const [user, setUser] = useUser();
@@ -74,7 +74,7 @@ const LogIn = () => {
 
           }} />
         </div>
-        <p style={{ fontSize: "20px" }}>Don't have an account?<Link to="/application">Register</Link></p>
+        <p style={{ fontSize: "20px" }}>Don't have an account?<Link to="/registration">Register</Link></p>
       </form >
 
     </div >

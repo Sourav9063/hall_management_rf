@@ -15,7 +15,7 @@ export default function Issue(props) {
         <div className={`${styles.form_body}`}>
             <div>
                 <h1 >{forWhat}</h1>
-                {forWhat === 'Issue' && <Link to="/issue_list">Current {forWhat}</Link>}
+                {forWhat === 'Issue'}
             </div>
             <form className={styles.form}>
                 <div >
