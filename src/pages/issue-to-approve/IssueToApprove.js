@@ -1,11 +1,11 @@
-import React, { useState } from "react";
-import styles from "./issue_list.module.css";
+import React from "react";
 import SideMenu from "../../components/sidemenu/SideMenu";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import styles from "../issueList/issue_list.module.css";
+import { Link, useLocation } from "react-router-dom";
+import { CiCircleMore } from "react-icons/ci";
+import { FcCancel, FcOk } from "react-icons/fc";
 
-export default function IssueList() {
-  
-  // a list of issues
+const IssueToApprove = () => {
   const issues = [
     {
       id: 1,
@@ -85,14 +85,10 @@ export default function IssueList() {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quod.",
     },
   ];
-  const {state} = useLocation()
-  console.log(state)
-  const[status,setStatus] = useState("");
-
   return (
     <div className={styles.flex_container}>
       <SideMenu />
-      <h1>Issue List</h1>
+      <h1>Issue To Approve</h1>
       <h5>Problems faced by the students.</h5>
       <h4>Sort by: Id/room/</h4>
       <table className={styles.table_wrapper}>
@@ -102,8 +98,8 @@ export default function IssueList() {
             <th>Reg No</th>
             <th>Issue Date</th>
             <th>Description</th>
-            <th>Status</th>
-            <th>Action</th>
+            <th>Accept</th>
+            <th>Reject</th>
           </tr>
         </thead>
         <tbody>
@@ -113,32 +109,22 @@ export default function IssueList() {
               <td>{issue.regNo}</td>
               <td>{issue.issueDate}</td>
               <td>{issue.description}</td>
-              <td
-                className={
-                  issue.status === "working"
-                    ? styles.working
-                    : issue.status === "completed"
-                    ? styles.completed
-                    : styles.pending
-                }
-              >
-                <Link style={{ textDecoration: 'none', color: 'black' }} 
-                to={
-                    issue.status==="pending"
-                    ?"/pending/create-note"
-                    : issue.status === "completed"
-                    ?"/completed/view-note"
-                    :"/create-view-note"
-                    } state = {{id:issue.id, regNo:issue.regNo, date: issue.issueDate,des :issue.description, roomNo:issue.roomNo}}>
-                 {issue.status}
+              <td>
+                <Link>
+                  <FcOk size="2em"></FcOk>
                 </Link>
               </td>
-              <td>{issue.action}</td>
+              <td>
+                <Link>
+                  <FcCancel size="2em"></FcCancel>
+                </Link>
+              </td>
             </tr>
           ))}
         </tbody>
       </table>
     </div>
   );
-} 
+};
 
+export default IssueToApprove;

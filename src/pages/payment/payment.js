@@ -10,8 +10,7 @@ const Payment = () => {
           amount: 3455,
           bank_reciept_no: "34edfg",
           payment_date: "12/12/21",
-          expire_date: "12/12/22",
-          
+          expire_date: "12/12/22",  
         },
         
       ];

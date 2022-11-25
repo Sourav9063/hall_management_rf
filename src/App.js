@@ -21,14 +21,21 @@ import Approval from "./pages/approval/approval";
 import Cancelled from "./pages/cancelled/Cancelled";
 import Approved from "./pages/approved/Approved";
 import CreateNote from "./pages/notes/CreateNote";
+import IssueToApprove from "./pages/issue-to-approve/IssueToApprove";
+import ApprovedIssue from "./pages/approved-issue/ApprovedIssue";
+import Expense from "./pages/expense-reciept/Expense";
+import User from "./pages/user/User";
+import DeleteResident from "./pages/delete-resident/DeleteResident";
+import ApprovalDetails from "./pages/approval/ApprovalDetails";
+import Assign from "./pages/assign/assign";
 
 function App() {
-  return ( 
+  return (
     <>
       <UserProvider>
         <Navbar />
         <Routes>
-          
+
           {/* public */}
           <Route path="/" element={<Home />} />
           <Route path="login" element={<LogIn />} />
@@ -47,24 +54,36 @@ function App() {
 
           {/* private authority */}
           <Route path="/issue_list" element={<IssueList />} />
+          {/* <Route path="/assign" element={<Assign />} /> */}
           {/* payment approve page */}
           {/* notice page */}
           {/* room details page and edit page */}
           <Route exact path="room-assign" component={AppliList} element={<RoomAssign />} />
           <Route path="resident" element={<Resident />} />
+          <Route path="delete-resident" element={<DeleteResident />} />
+
           <Route path="room" element={<Room />} />
 
 
           {/* private department_head */}
           <Route path="for-approval" element={<Approval />} />
+          <Route path="approval-detail" element={<ApprovalDetails />} />
           <Route path="cancelled" element={<Cancelled />} />
-          
+
 
           {/* application list for approve by dept head */}
-          <Route path="approved" element={<Approved/>} />
+          <Route path="approved" element={<Approved />} />
 
           {/*page about expenses notes and others*/}
-          <Route path="/pending/create-note" element={<CreateNote/>} />
+          <Route path="/pending/create-note" element={<CreateNote />} />
+          <Route path="/issue-to-approve" element={<IssueToApprove />} />
+          <Route path="/approved-issue" element={<ApprovedIssue />} />
+          <Route path="/expense" element={<Expense />} />
+          <Route path="/expense" element={<Expense />} />
+
+          {/* user */}
+          <Route path="/user" element={<User />} />
+
         </Routes>
         <Footer />
       </UserProvider>

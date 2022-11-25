@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 
 import style from "./Home.module.css";
 
-import img2 from "../../assets/images/img2.jpg";
 import { useNavigate } from "react-router-dom";
+import img2 from "../../assets/images/img2.jpg";
+import CustomButton from "../../components/custom_button/CustomButton";
 import Silde from "../../components/slider/Slider";
 import { SliderData } from "../../components/slider/SliderData";
+
 
 const Home = () => {
   const [user, setUser] = useState(localStorage.getItem("user"));
@@ -37,9 +39,9 @@ const Home = () => {
           </a>
           <h4 className={style.log}>Logged In As {user}</h4>
         </div>
-        <div className={style.btn}>
-          <button onClick={toApplication}>Apply now</button>
-          <button onClick={toLogIn}>Log In</button>
+        <div className={style.btn_space}>
+          <CustomButton color="brown" name="Apply Now" onClick={toApplication}></CustomButton>
+          <CustomButton color="brown" name="Log In" onClick={toLogIn}></CustomButton>
         </div>
       </div>
 

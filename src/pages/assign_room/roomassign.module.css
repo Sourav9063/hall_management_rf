@@ -1,32 +1,33 @@
 .info_center {
   margin: auto;
   width: 50%;
-  border: 3px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.24);
   padding: 40px;
   line-height: 30px;
   font-size: 20px;
-  margin-top: 110px;
+  margin-top: 0px;
+   
 }
-.info_center h2{
+.header{
+    margin: auto;
+    width: 50%;
+    padding: 0;
+}
+.header h2{
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-top: 100px;
     text-align: center;
     font-size: 30px;
     text-transform: uppercase;
     letter-spacing: 1px;
-    color: black;
     padding: 30px 0;
+    background-color: #324960;
+    color: white;
 }
-.info p{
+.info div{
     margin: 10px 0;
-    width: fit-content;
-   
-}
-.info {
-    display: flex;
-    flex-direction: column;
-}
-
-.info p{
-    margin: 10px 0;
+    padding: 3px;
 }
 
 .info button{
@@ -36,3 +37,34 @@
     margin-left: 0;
 }
 
+.container{
+    display: flex;
+    flex-direction: row;
+    
+}
+
+.label{
+    font-size:20px;
+     font-weight: 600;
+     display:flex;
+     flex-direction: column;
+     margin-left: 50px !important;
+}
+.rel_info{
+    margin-left: 500px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 100px!important;
+}
+
+.info_center select{
+    width: 100%;
+    border-radius: 5px;
+    background-color: #324960;
+    color: white;
+    font-weight: 500;
+    font-size: larger;
+}
+.rel_info p{
+    line-height: 50px;
+}

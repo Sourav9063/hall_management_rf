@@ -63,16 +63,3 @@ div select {
     margin-left: 10px;
 }
 
-.submit {
-    width: fit-content;
-    margin: auto;
-    padding: 15px 35px;
-    cursor: pointer;
-    background-color: #DE840A;
-    color: white;
-}
-
-.submit:hover {
-    background-color: rgb(57, 141, 57);
-    transition: ease-in 0.3s;
-}

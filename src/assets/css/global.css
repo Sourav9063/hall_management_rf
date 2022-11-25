@@ -67,8 +67,10 @@ a:hover {
     background-size: 100% 2px;
 }
 
-a:focus,
-button:focus {
+a:focus
+
+/* button:focus  */
+    {
     animation: bouncing 0.5s ease-in-out;
     background-image: linear-gradient(var(--accent-color), var(--accent-color));
 

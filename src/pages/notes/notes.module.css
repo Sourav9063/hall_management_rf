@@ -1,0 +1,14 @@
+.date button{
+    margin: 0 !important;
+    border-radius: none !important;
+    font-size:none;
+    color:none;
+    padding:0;
+}
+
+.image_item img{
+    height:400px;
+    width:300px;
+}
+
+

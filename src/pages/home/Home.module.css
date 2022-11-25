@@ -4,7 +4,7 @@
     background-image: linear-gradient(to bottom, var(--header-top-color), var(--header-bottom-color)), url(https://upload.wikimedia.org/wikipedia/commons/6/69/Sust_shahporanhall.jpg);
     background-position: center;
     background-size: cover;
-    height: 65vh;
+    height: 85vh;
     width: 100%;
     top: 0;
     overflow: hidden;
@@ -63,7 +63,7 @@
     color: white;
 }
 
-.btn {
+.btn_space {
     position: relative;
     display: flex;
     justify-content: center;
@@ -71,21 +71,9 @@
     margin-top: 350px;
 }
 
-button {
-    margin: 30px;
-    padding: 15px 35px;
-    border-radius: 10px;
-    border: none;
-    font-size: medium;
-    background-color: white;
-    color: #DE840A;
-    cursor: pointer;
-}
 
 button:hover {
     transition: ease-in 0.3s;
-    color: white;
-    background-color: #DE840A;
 }
 
 .about {
