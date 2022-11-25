@@ -1,4 +1,5 @@
 # Deployed [Here](https://sourav9063.github.io/hall_management_rf/)
+# [Authority Panel](https://sourav9063.github.io/hall_management_rf/#/application-list) 
 ![Screenshot 2022-11-19 194707](https://user-images.githubusercontent.com/53114581/202853827-47a44716-f0b2-4c0c-b831-5b651e6c8688.jpg)
 
 ![Screenshot 2022-11-19 195125](https://user-images.githubusercontent.com/53114581/202853980-62389a23-3935-4666-9a00-8a5824fb4151.jpg)
